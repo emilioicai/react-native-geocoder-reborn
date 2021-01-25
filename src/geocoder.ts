@@ -98,7 +98,7 @@ async function geocodeAddress(
   }
 
   if (options.forceGoogleOnIos && Platform.OS === 'ios') {
-    return geocodeAddressGoogle(address);
+    return geocodeAddressGoogle(address, options);
   }
 
   if (nativeImpl == null) {
